@@ -169,6 +169,19 @@ export default {
 
 <template>
   <div class="game">
+    <router-link class="game-link" to="/settings">
+      Settings
+    </router-link>
     <vue-p5 v-on="{ setup, draw, keypressed, keyreleased, update }" />
   </div>
 </template>
+
+<style lang="scss">
+.game {
+  &-link {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+}
+</style>

@@ -13,16 +13,17 @@ body {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
-
   position: relative;
 }
 
 canvas {
   background: #555;
   margin: 0 auto;
-  border-color: #fff;
   display: block;
-  border-style: solid;
-  border-width: 8px;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
 }
 </style>
