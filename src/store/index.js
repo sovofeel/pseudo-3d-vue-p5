@@ -4,7 +4,43 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    grid: [
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+      [1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+      [1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1],
+      [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1],
+      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+      [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
+      [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+      [1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1],
+      [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ],
+    tileSize: 40,
+    mapNumRows: 16,
+    mapNumCols: 15,
+    FOVAngle: 60,
+    wallStripWidth: 1,
+    minimapScaleFactor: 0.3
+  },
+  getters: {
+    grid: state => state.grid,
+    tileSize: state => state.tileSize,
+    mapNumRows: state => state.mapNumRows,
+    mapNumCols: state => state.mapNumCols,
+    FOVAngle: state => state.FOVAngle,
+    wallStripWidth: state => state.wallStripWidth,
+    minimapScaleFactor: state => state.minimapScaleFactor,
+    canvasWidth: state => state.mapNumRows * state.tileSize,
+    canvasHeight: state => state.mapNumCols * state.tileSize
+  },
   mutations: {},
   actions: {},
   modules: {}
