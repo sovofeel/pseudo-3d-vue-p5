@@ -28,7 +28,7 @@ export default new Vuex.Store({
     mapNumCols: 15,
     FOVAngle: 60,
     wallStripWidth: 1,
-    minimapScaleFactor: 0.3
+    scaleFactor: 0.3
   },
   getters: {
     grid: state => state.grid,
@@ -37,7 +37,7 @@ export default new Vuex.Store({
     mapNumCols: state => state.mapNumCols,
     FOVAngle: state => state.FOVAngle,
     wallStripWidth: state => state.wallStripWidth,
-    minimapScaleFactor: state => state.minimapScaleFactor,
+    scaleFactor: state => state.scaleFactor,
     canvasWidth: state => state.mapNumRows * state.tileSize,
     canvasHeight: state => state.mapNumCols * state.tileSize
   },
